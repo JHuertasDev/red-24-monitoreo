@@ -1,10 +1,4 @@
 <?php
-wp_deregister_script( 'jquery' );
-wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, NULL, true );
-wp_enqueue_script( 'jquery' );
-
-wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', '', 19, true );
-
 $whitelist = array(
     '127.0.0.1',
     '::1'
@@ -26,3 +20,19 @@ $whitelist = array(
 		<?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
+
+        <div id="menu-contenedor" class="text-center">
+            <div class="contenedor-general">                    
+                <div id="menu-logo-container" class="align-middle d-inline-block">
+                    <?php 
+                        the_custom_logo();
+                    ?>
+                </div><!-- /#menu-logo-container-->
+
+                <div id="inner-menu-container" class="align-middle d-inline-block">
+                    <?php
+                        wp_nav_menu( array( 'theme_location' => 'menu-principal' ) );
+                    ?>
+                </div> <!-- /#inner-menu-container-->
+            </div>  <!--- /contenedor-general-->
+        </div> <!-- /#menu-contenedor-->

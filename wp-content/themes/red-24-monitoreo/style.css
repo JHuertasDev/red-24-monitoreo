@@ -1,5 +1,121 @@
 /*
 Theme Name: Red 24 Monitoreo
-Author: José Luis Huertas (JHDev)
+Author: JosÃƒÂ© Luis Huertas (JHDev)
 
 */
+/* FUENTES */
+
+@font-face {
+    font-family: 'Eurostile LT Std Oblique';
+    font-style: normal;
+    font-weight: normal;
+    src: local('fonts/Eurostile LT Std Oblique'), url('fonts/Eurostile-LT-Std-Oblique_16312.woff') format('woff');
+}       
+@font-face {
+    font-family: 'Eurostile LT Std Demi Oblique';
+    font-style: normal;
+    font-weight: normal;
+    src: local('fonts/Eurostile LT Std Demi Oblique'), url('fonts/Eurostile-LT-Std-Demi-Oblique_16309.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Eurostile';
+    font-style: normal;
+    font-weight: normal;
+    src: local('fonts/Eurostile'), url('fonts/eurostile.woff') format('woff');
+}
+    
+    
+@font-face {
+    font-family: 'EuroStyle Normal';
+    font-style: normal;
+    font-weight: normal;
+    src: local('fonts/EuroStyle Normal'), url('fonts/EuroStyle Normal.woff') format('woff');
+}
+
+/* GENERAL */
+
+body{
+    background-color: #000000;
+    font-family: 'EuroStyle Normal';
+    color: #fff;
+}
+
+h1, h2,h3,h4, p, a{
+    font-family: 'Eurostile';
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    letter-spacing: 5px;
+}
+h1{
+    font-size: 38px;
+    font-weight: 800;
+}
+h2{
+    font-size: 26px;
+}
+h3{
+    font-size: 20px;
+}
+h4{
+    font-size: 18px;
+}
+p{
+    font-size: 12px;
+}
+a{
+    font-size: 16px;
+}
+
+.centrar-v{
+    vertical-align: middle;
+    display: inline-block;
+    height: 100%;
+    width: 1px;
+    margin-left: -1px;
+}
+
+.img-cover-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.inner-imagen-cover .img-cover{
+    z-index: 1;
+}
+.col-sin-padding, .container-sin-padding{
+    padding: 0;
+}
+
+.pie{
+    /*background-color: #fff;*/
+    background-color: #1d242c;
+    padding: 85px 0 95px 0;
+}
+/* PIE */
+.cont-logo-pie img{
+    height: 187px;
+    width: auto;
+}
+.datos-pie{
+    margin-top: 40px;
+}
+.datos-pie p{
+    color: #ec3237;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+.datos-pie p a{
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+    font-weight: inherit;
+}
+#developedby{
+    margin-top: 20px;
+}

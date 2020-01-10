@@ -11,13 +11,13 @@ Author: JosÃƒÂ© Luis Huertas (JHDev)
     font-weight: normal;
     src: local('fonts/Eurostile LT Std Oblique'), url('fonts/Eurostile-LT-Std-Oblique_16312.woff') format('woff');
 }       
+
 @font-face {
     font-family: 'Eurostile LT Std Demi Oblique';
     font-style: normal;
     font-weight: normal;
     src: local('fonts/Eurostile LT Std Demi Oblique'), url('fonts/Eurostile-LT-Std-Demi-Oblique_16309.woff') format('woff');
 }
-
 
 @font-face {
     font-family: 'Eurostile';
@@ -33,11 +33,16 @@ Author: JosÃƒÂ© Luis Huertas (JHDev)
     font-weight: normal;
     src: local('fonts/EuroStyle Normal'), url('fonts/EuroStyle Normal.woff') format('woff');
 }
+@font-face {
+    font-family: 'EuroStyle Extended';
+    src: url('fonts/EurostileExtendedBlack.woff') format('woff');
+}
+
 
 /* GENERAL */
 
 body{
-    background-color: #000000;
+    background-color: #1d242c;
     font-family: 'EuroStyle Normal';
     color: #fff;
 }
@@ -91,13 +96,31 @@ a{
 .col-sin-padding, .container-sin-padding{
     padding: 0;
 }
-
+.ancho-contenido{
+    max-width: 100%;
+    width: 1190px;
+    margin: 0 auto;
+}
+.container-margin-menu{
+    margin-top: 155px;
+}
+.titulo-seccion{
+    padding: 50px 0 50px 0;
+}
+.row-portada{
+    height: 480px;
+}
+.titulo-portada h1{
+    font-family: 'EuroStyle Extended';
+    font-size: 48px;
+}
+/* PIE */
 .pie{
     /*background-color: #fff;*/
     background-color: #1d242c;
     padding: 85px 0 95px 0;
+    overflow: hidden;
 }
-/* PIE */
 .cont-logo-pie img{
     height: 187px;
     width: auto;

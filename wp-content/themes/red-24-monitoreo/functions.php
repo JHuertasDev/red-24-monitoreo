@@ -1,10 +1,12 @@
 <?php
 
-include_once( get_theme_file_path( "includes/galeria/helpers.php" ) );
+include_once( get_theme_file_path( "includes/galeria/galeria.php" ) );
+include_once( get_theme_file_path( "includes/mapa/mapa.php" ) );
 
 
 define('THEME_VERSION', '28122019' );
 define('THEME_GOOGLE_API_KEY', 'AIzaSyCxm9ZRPoQy_84MgDzFmB3XR2oYKv4f_iQ' );
+//mi api AIzaSyDIOyFgK3LvkZG6EJDEzlAaNJdqBH1Derk
 define('THEME_TEMPLATE_DIRECTORY_URI',get_template_directory_uri());
 define('THEME_STYLESHEET_DIRECTORY_URI', get_template_directory_uri().'/css' );
 define('THEME_JAVASCRIPT_DIRECTORY_URI', THEME_TEMPLATE_DIRECTORY_URI.'/js' );
@@ -18,10 +20,6 @@ remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
 function registrar_scripts(){
 
-	wp_enqueue_script( 'maps','https://maps.googleapis.com/maps/api/js?key='.THEME_GOOGLE_API_KEY.'&amp;ver=4.9.10&libraries=places' );
-	wp_enqueue_script('maps');
-
-	
 	wp_deregister_script( 'jquery' );
 	wp_register_script( 'jquery', THEME_TEMPLATE_DIRECTORY_URI.'/vendor/components/jquery/jquery.min.js',false, 341, true ); // 3.4.1 Version
 	wp_enqueue_script( 'jquery' );	
@@ -38,7 +36,7 @@ function registrar_scripts(){
 	wp_register_script( 'imgCoverEffect', THEME_JAVASCRIPT_PLUGINS_DIRECTORY_URI . '/imgCoverEffect/imgCoverEffect.min.js',array('jquery'), 21, true ); // 0.2.1 Version
 	wp_enqueue_script( 'imgCoverEffect' ); 
 	
-	wp_enqueue_script( 'main', THEME_JAVASCRIPT_DIRECTORY_URI . '/main.js', array('jquery','maps','imgCoverEffect'),THEME_VERSION , true );
+	wp_enqueue_script( 'main', THEME_JAVASCRIPT_DIRECTORY_URI . '/main.js', array('jquery','imgCoverEffect'),THEME_VERSION , true );
 }
 add_action( 'wp_enqueue_scripts', 'registrar_scripts');
 
